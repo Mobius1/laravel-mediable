@@ -1,5 +1,5 @@
 {
-    "name": "plank/laravel-mediable",
+    "name": "mobius1/laravel-mediable",
     "description": "A package for easily uploading and attaching media files to models with Laravel",
     "keywords": ["media", "image", "uploader", "eloquent", "laravel"],
     "license": "MIT",
@@ -7,6 +7,10 @@
         {
             "name": "Sean Fraser",
             "email": "sean@plankdesign.com"
+        },
+        {
+            "name": "Karl Saunders",
+            "email": "karl@mobiuswebdesign.co.uk"
         }
     ],
     "require": {
@@ -25,7 +29,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Plank\\Mediable\\": "src/"
+            "Mobius1\\Mediable\\": "src/"
         }
     },
     "autoload-dev":{
