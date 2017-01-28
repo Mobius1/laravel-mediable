@@ -14,19 +14,23 @@ class CreateMediableTables extends Migration
     public function up()
     {
         Schema::create('media', function (Blueprint $table) {
-            $table->increments('id');
+            $table->uuid('id');
             $table->string('disk', 32);
             $table->string('directory');
             $table->string('filename');
             $table->string('extension', 32);
             $table->string('mime_type', 128);
             $table->string('aggregate_type', 32);
+            $table->integer('width')->unsigned();
+            $table->integer('height')->unsigned();
             $table->integer('size')->unsigned();
             $table->timestamps();
 
             $table->index(['disk', 'directory']);
             $table->unique(['disk', 'directory', 'filename', 'extension']);
             $table->index('aggregate_type');
+
+            $table->primary('id');
         });
 
         Schema::create('mediables', function (Blueprint $table) {

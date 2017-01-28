@@ -28,6 +28,16 @@ return [
     'max_size' => 1024 * 1024 * 10,
 
     /*
+     * Generate thumbnails for images
+     */
+    'generate_thumbnails' => true,
+
+    /*
+     * Set the thumbnail sizes
+     */
+    'thumbnail_sizes' => [ 100, 300 ],
+
+    /*
      * What to do if a duplicate file is uploaded.
      *
      * Options include:
